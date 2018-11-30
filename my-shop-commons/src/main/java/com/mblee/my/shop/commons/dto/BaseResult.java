@@ -48,4 +48,5 @@ public class BaseResult implements Serializable {
         baseResult.setMessage(message);
         return baseResult;
     }
+
 }
