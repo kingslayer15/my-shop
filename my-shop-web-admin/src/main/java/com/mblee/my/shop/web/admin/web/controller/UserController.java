@@ -57,6 +57,5 @@ public class UserController {
             model.addAttribute("baseResult",baseResult);
             return "user_form";
         }
-
     }
 }
