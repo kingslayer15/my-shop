@@ -54,28 +54,28 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3" placeholder="请输入Email">
+                                        <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="请输入Email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
 
                                     <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="请输入登录密码">
+                                        <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="请输入登录密码">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputUsername" class="col-sm-2 control-label">用户名</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputUsername" placeholder="请输入用户名">
+                                        <input type="text" class="form-control" id="inputUsername" name="username" placeholder="请输入用户名">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPhone" class="col-sm-2 control-label">手机号码</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputPhone" placeholder="请输入手机号码">
+                                        <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="请输入手机号码">
                                     </div>
                                 </div>
 

@@ -108,8 +108,6 @@ public class TbUserServiceImpl implements TbUserService {
         else if (StringUtils.isBlank(tbUser.getPhone())){
             baseResult = BaseResult.fail("手机不能为空,请重新输入");
         }
-
         return baseResult;
-
     }
 }

@@ -50,7 +50,7 @@ public class UserController {
 
         if (baseResult.getStatus() == BaseResult.STATUS_SUCCESS){
             redirectAttributes.addFlashAttribute("baseResult",baseResult);
-            return "redirect:/list";
+            return "redirect:/user/list";
         }
         //"失败"
         else {
