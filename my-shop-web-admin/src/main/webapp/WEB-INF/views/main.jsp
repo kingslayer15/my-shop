@@ -38,7 +38,7 @@
             </div>
             <!-- /.content-wrapper -->
 
-            <jsp:include page="../includes/cpoyright.jsp"/>
+            <jsp:include page="../includes/copyright.jsp"/>
         </div>
 
         <jsp:include page="../includes/footer.jsp"/>

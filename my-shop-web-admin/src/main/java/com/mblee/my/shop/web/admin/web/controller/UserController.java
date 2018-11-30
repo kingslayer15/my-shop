@@ -41,7 +41,7 @@ public class UserController {
     }
 
     /**
-     * 保存表单提交的用户
+     * 保存用户信息
      * @return
      */
     @RequestMapping(value = "save", method = RequestMethod.POST)

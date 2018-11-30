@@ -36,10 +36,9 @@
         <section class="content">
             <div class="row">
                 <div class="col-md-12">
-                    <c:if test="${baseResult != null} ">
+                    <c:if test="${baseResult != null}">
                         <div class="alert alert-${baseResult.status == 200 ? "success" : "danger"} alert-dismissible">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                 ${baseResult.message}
                         </div>
                     </c:if>
@@ -49,7 +48,7 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form class="form-horizontal" href="/user/save" method="post">
+                        <form class="form-horizontal" action="/user/save" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -95,7 +94,7 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <jsp:include page="../includes/cpoyright.jsp"/>
+    <jsp:include page="../includes/copyright.jsp"/>
 </div>
 
 <jsp:include page="../includes/footer.jsp"/>
