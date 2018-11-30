@@ -51,12 +51,12 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public void deleteById(long id) {
+    public void deleteById(Long id) {
         tbUserDao.delete(id);
     }
 
     @Override
-    public TbUser getById(long id){
+    public TbUser getById(Long id){
         TbUser tbUser = tbUserDao.getById(id);
 
         return tbUser;
@@ -99,11 +99,11 @@ public class TbUserServiceImpl implements TbUserService {
         if (StringUtils.isBlank(tbUser.getUsername())){
             baseResult = BaseResult.fail("用户名不能为空,请重新输入");
         }
-        else if (StringUtils.isBlank(tbUser.getPassword())){
-            baseResult = BaseResult.fail("密码不能为空,请重新输入");
-        }
         else if (StringUtils.isBlank(tbUser.getEmail())){
             baseResult = BaseResult.fail("邮箱不能为空,请重新输入");
+        }
+        else if (StringUtils.isBlank(tbUser.getPassword())){
+            baseResult = BaseResult.fail("密码不能为空,请重新输入");
         }
         else if (StringUtils.isBlank(tbUser.getPhone())){
             baseResult = BaseResult.fail("手机不能为空,请重新输入");

@@ -15,10 +15,10 @@ public interface TbUserDao {
     public void insert(TbUser tbUser);
 
 
-    public void delete(long id);
+    public void delete(Long id);
 
 
-    public TbUser getById(long id);
+    public TbUser getById(Long id);
 
 
     public void update(TbUser tbUser);

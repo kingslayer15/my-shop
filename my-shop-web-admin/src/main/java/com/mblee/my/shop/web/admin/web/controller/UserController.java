@@ -35,7 +35,7 @@ public class UserController {
      * 跳转到用户表单页
      * @return
      */
-    @RequestMapping(value = "/form", method = RequestMethod.GET)
+    @RequestMapping(value = "form", method = RequestMethod.GET)
     public String form(){
         return "user_form";
     }
@@ -44,7 +44,7 @@ public class UserController {
      * 保存表单提交的用户
      * @return
      */
-    @RequestMapping(value = "save", method = RequestMethod.GET)
+    @RequestMapping(value = "save", method = RequestMethod.POST)
     public String save(TbUser tbUser, Model model, RedirectAttributes redirectAttributes){
         BaseResult baseResult = tbUserService.save(tbUser);
 

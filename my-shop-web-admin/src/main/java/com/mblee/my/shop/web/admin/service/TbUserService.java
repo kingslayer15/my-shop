@@ -13,9 +13,9 @@ public interface TbUserService {
 
     public BaseResult save(TbUser tbUser);
 
-    public void deleteById(long id);
+    public void deleteById(Long id);
 
-    public TbUser getById(long id);
+    public TbUser getById(Long id);
 
     public void update(TbUser tbUser);
 

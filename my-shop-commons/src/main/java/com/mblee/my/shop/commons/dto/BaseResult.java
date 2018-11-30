@@ -17,10 +17,10 @@ public class BaseResult implements Serializable {
     }
 
     public static BaseResult fail(){
-        return createResult(STATUS_SUCCESS,"失败");
+        return createResult(STATUS_FAIL,"失败");
     }
     public static BaseResult fail(String message){
-        return createResult(STATUS_SUCCESS,message);
+        return createResult(STATUS_FAIL,message);
     }
     public static BaseResult fail(int status, String message){
         return createResult(status,message);
