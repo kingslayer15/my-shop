@@ -100,7 +100,7 @@ public class TbUserServiceImpl implements TbUserService {
         if (StringUtils.isBlank(tbUser.getEmail())){
             baseResult = BaseResult.fail("邮箱不能为空,请重新输入");
         }
-        else if (!RegexpUtils.checkPhone(tbUser.getEmail())){
+        else if (!RegexpUtils.checkEmail(tbUser.getEmail())){
             baseResult = BaseResult.fail("邮箱格式不正确，请重新输入");
         }
         else if (StringUtils.isBlank(tbUser.getPassword())){

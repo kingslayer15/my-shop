@@ -82,8 +82,8 @@
                                         <td>${tbUser.email}</td>
                                         <td><fmt:formatDate value="${tbUser.updated}" pattern="yyyy-MM-dd HH:mm:ss"/> </td>
                                         <td>
-                                            <a href="/user/form" type="button" class="btn btn-default btn-sm"><i class="fa fa-fw fa-search"></i>查看</a>
-                                            <a href="/user/form" type="button" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i>编辑</a>
+                                            <a href="/user/form" type="button" class="btn btn-default btn-sm" ><i class="fa fa-fw fa-search"></i>查看</a>
+                                            <a href="/user/form" type="submit" class="btn btn-primary btn-sm" ><i class="fa fa-fw fa-edit"></i>编辑</a>
                                             <a href="#" type="button" class="btn btn-danger btn-sm" ><i class="fa fa-fw fa-trash-o"></i>删除</a>
                                         </td>
                                     </tr>

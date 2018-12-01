@@ -2,7 +2,6 @@ package com.mblee.my.shop.web.admin.service.test;
 
 
 import com.mblee.my.shop.domain.TbUser;
-import com.mblee.my.shop.web.admin.dao.TbUserDao;
 import com.mblee.my.shop.web.admin.service.TbUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -79,6 +78,7 @@ public class TbUserServiceTest {
         TbUser tbUser = tbUserDao.getByEmail("asdasd@qq.com");
         System.out.println(tbUser.getUsername());
     }*/
+
 }
 
 

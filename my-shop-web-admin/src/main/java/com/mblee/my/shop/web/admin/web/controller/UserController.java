@@ -7,6 +7,7 @@ import com.mblee.my.shop.web.admin.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -36,7 +37,9 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "form", method = RequestMethod.GET)
-    public String form(){
+    public String form(Model model){
+        TbUser tbUser = new TbUser();
+        model.addAttribute("tbUser",tbUser);
         return "user_form";
     }
 
@@ -57,5 +60,25 @@ public class UserController {
             model.addAttribute("baseResult",baseResult);
             return "user_form";
         }
+    }
+
+    @ModelAttribute
+    public TbUser getTbUser(Long id){
+        System.out.println(id);
+
+        TbUser tbUser = null;
+
+        System.out.println("getTbUser");
+
+        if (id != null){
+            System.out.println(id + "2");
+            tbUser = tbUserService.getById(id);
+            System.out.println(id + "3");
+        }
+
+        else {
+            tbUser = new TbUser();
+        }
+        return tbUser;
     }
 }
