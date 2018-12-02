@@ -9,24 +9,26 @@ import java.util.List;
 @Repository
 public interface TbUserDao {
 
-    public List<TbUser> selectAll();
+     List<TbUser> selectAll();
 
 
-    public void insert(TbUser tbUser);
+     void insert(TbUser tbUser);
 
 
-    public void delete(Long id);
+     void delete(Long id);
 
 
-    public TbUser getById(Long id);
+     TbUser getById(Long id);
 
 
-    public void update(TbUser tbUser);
+     void update(TbUser tbUser);
 
 
-    public TbUser selectByUsername(String username);
+     TbUser selectByUsername(String username);
 
 
-    public TbUser getByEmail(String email);
+    TbUser getByEmail(String email);
+
+    List<TbUser> search(TbUser tbUser);
 }
 

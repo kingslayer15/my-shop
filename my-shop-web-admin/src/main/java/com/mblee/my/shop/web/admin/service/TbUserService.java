@@ -9,17 +9,19 @@ import java.util.List;
 
 
 public interface TbUserService {
-    public List<TbUser> selectAll();
+    List<TbUser> selectAll();
 
-    public BaseResult save(TbUser tbUser);
+    BaseResult save(TbUser tbUser);
 
-    public void deleteById(Long id);
+    void deleteById(Long id);
 
-    public TbUser getById(Long id);
+    TbUser getById(Long id);
 
-    public void update(TbUser tbUser);
+    void update(TbUser tbUser);
 
-    public TbUser selectByUsername(String username);
+    TbUser selectByUsername(String username);
 
-    public TbUser login(String email, String password);
+    TbUser login(String email, String password);
+
+    List<TbUser> search(TbUser tbUser);
 }

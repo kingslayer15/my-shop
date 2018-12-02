@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html>
@@ -51,15 +52,55 @@
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-fw fa-upload"></i>导出</a>
                             </div>
                             <div class="box-tools">
-                                <div class="input-group input-group-sm" style="width: 150px;">
-                                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                                    <div class="input-group-btn">
-                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                <form class="box-tools" action="/user/search" method="post">
+                                    <div class="input-group input-group-sm" style="width: 150px;">
+                                        <input type="text" name="keyword" class="form-control pull-right" placeholder="Search">
+                                        <div class="input-group-btn">
+                                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
+                            <div class="row" style="margin-top: 30px">
+                                <form:form cssClass="form-horizontal" action="/user/search" modelAttribute="tbUser">
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="username" class="col-sm-2 control-label">用户名</label>
+
+                                            <div class="col-sm-8">
+                                                <form:input path="username" cssClass="form-control" placeholder="请输入用户名地址"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="email" class="col-sm-2 control-label">邮箱</label>
+
+                                            <div class="col-sm-8">
+                                                <form:input path="email" cssClass="form-control" placeholder="请输入邮箱地址"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="phone" class="col-sm-2 control-label">手机</label>
+
+                                            <div class="col-sm-8">
+                                                <form:input path="phone" cssClass="form-control" placeholder="请输入手机"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-right: 70px">
+                                        <div class="col-sm-8 pull-right">
+                                            <button type="submit" class="btn btn-info pull-right">搜索</button>
+                                        </div>
+                                    </div>
+
+                                </form:form>
+                            </div>
+
                         </div>
+
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
                             <table class="table table-hover">
