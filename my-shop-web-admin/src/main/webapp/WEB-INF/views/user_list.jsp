@@ -106,6 +106,7 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
+                                        <th><input type="checkbox" class="minimal icheck_master"/></th>
                                         <th>ID</th>
                                         <th>用户名</th>
                                         <th>手机号</th>
@@ -117,6 +118,7 @@
                                 <tbody>
                                 <c:forEach items="${tbUsers}" var="tbUser">
                                     <tr>
+                                        <td><input type="checkbox" class="minimal"/></td>
                                         <td>${tbUser.id}</td>
                                         <td>${tbUser.username}</td>
                                         <td>${tbUser.phone}</td>
