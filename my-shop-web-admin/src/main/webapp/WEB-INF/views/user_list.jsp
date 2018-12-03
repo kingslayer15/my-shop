@@ -42,6 +42,48 @@
                                 ${baseResult.message}
                         </div>
                     </c:if>
+
+                    <div class="box box-info box-info-search" style="display: none">
+                        <div class="box-header">
+                            <h3 class="box-title">高级搜索</h3>
+                        </div>
+                        <form:form cssClass="form-horizontal" action="/user/search" method="post" modelAttribute="tbUser">
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label">用户名</label>
+
+                                    <div class="col-sm-8">
+                                        <form:input path="username" cssClass="form-control" placeholder="请输入用户名地址"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">邮箱</label>
+
+                                    <div class="col-sm-8">
+                                        <form:input path="email" cssClass="form-control" placeholder="请输入邮箱地址"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <label for="phone" class="col-sm-2 control-label">手机</label>
+
+                                    <div class="col-sm-8">
+                                        <form:input path="phone" cssClass="form-control" placeholder="请输入手机"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="padding-right: 70px">
+                                <div class="col-sm-8 pull-right">
+                                    <button type="submit" class="btn btn-info pull-right">搜索</button>
+                                </div>
+                            </div>
+
+                        </form:form>
+                    </div>
+
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">用户列表</h3>
@@ -50,55 +92,8 @@
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-fw fa-trash-o"></i>删除</a>&nbsp;
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-fw fa-download"></i>导入</a>&nbsp;
                                 <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-fw fa-upload"></i>导出</a>
+                                <button type="button" class="btn btn-sm btn-primary" onclick="$('.box-info-search').css('display') == 'none' ? $('.box-info-search').show('fast') : $('.box-info-search').hide('fast')"><i class="fa fa-search"></i> 搜索</button>
                             </div>
-                            <div class="box-tools">
-                                <form class="box-tools" action="/user/search" method="post">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="keyword" class="form-control pull-right" placeholder="Search">
-                                        <div class="input-group-btn">
-                                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="row" style="margin-top: 30px">
-                                <form:form cssClass="form-horizontal" action="/user/search" modelAttribute="tbUser">
-                                    <div class="col-xs-3">
-                                        <div class="form-group">
-                                            <label for="username" class="col-sm-2 control-label">用户名</label>
-
-                                            <div class="col-sm-8">
-                                                <form:input path="username" cssClass="form-control" placeholder="请输入用户名地址"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="form-group">
-                                            <label for="email" class="col-sm-2 control-label">邮箱</label>
-
-                                            <div class="col-sm-8">
-                                                <form:input path="email" cssClass="form-control" placeholder="请输入邮箱地址"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="form-group">
-                                            <label for="phone" class="col-sm-2 control-label">手机</label>
-
-                                            <div class="col-sm-8">
-                                                <form:input path="phone" cssClass="form-control" placeholder="请输入手机"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="padding-right: 70px">
-                                        <div class="col-sm-8 pull-right">
-                                            <button type="submit" class="btn btn-info pull-right">搜索</button>
-                                        </div>
-                                    </div>
-
-                                </form:form>
-                            </div>
-
                         </div>
 
                         <!-- /.box-header -->
