@@ -6,12 +6,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MainController {
-    /**
-     * 跳转到首页
-     * @return
-     */
+
     @RequestMapping(value = "main", method = RequestMethod.GET)
-    public String main(){
+    public String main() {
         return "main";
     }
 }

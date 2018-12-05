@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <header class="main-header">
     <!-- Logo -->
@@ -10,12 +9,14 @@
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>我的商城</b></span>
     </a>
+
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
+
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- User Account: style can be found in dropdown.less -->
@@ -30,11 +31,10 @@
                             <img src="/static/assets/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                             <p>
-                                ${user.username} - java Developer
-                                <small><fmt:formatDate value="${user.created}" pattern="yyyy-MM-dd HH:mm:ss"/></small>
+                                ${user.username} - Java Developer
+                                <small><fmt:formatDate value="${user.created}" pattern="yyyy-MM-dd HH:mm:ss"/> </small>
                             </p>
                         </li>
-
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">

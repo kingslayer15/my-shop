@@ -16,4 +16,11 @@
     <name>my-shop-domain</name>
     <description></description>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.mblee</groupId>
+            <artifactId>my-shop-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
 </project>
